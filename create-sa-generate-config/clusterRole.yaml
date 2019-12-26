@@ -34,9 +34,9 @@ rules:
       - serviceaccounts
       - services
       - secrets
-    verbs: ["*"]
+    verbs: ["get", "list", "watch", "create", "update", "patch", "delete"]
   - nonResourceURLs: ["*"]
-    verbs: ["*"]
+    verbs: ["get", "list", "watch", "create", "update", "patch", "delete"]
 ---
 apiVersion: rbac.authorization.k8s.io/v1beta1
 kind: ClusterRoleBinding
@@ -49,4 +49,4 @@ roleRef:
 subjects:
 - kind: ServiceAccount
   name: api-service-account
-  namespace: default
+  namespace: prod 
