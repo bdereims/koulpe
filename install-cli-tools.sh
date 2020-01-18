@@ -6,6 +6,7 @@ HELM_VERSION=3.0.0
 KUBECTL_VERSION=1.16.3
 SHIP_VERSION=0.40.0
 STERN_VERSION=1.11.0
+COMPLETIONS=/etc/bash_completion.d
 
 curl -L -o /usr/local/bin/docker-compose https://github.com/docker/compose/releases/download/${COMPOSE_VERSION}/docker-compose-Linux-x86_64 && chmod +x /usr/local/bin/docker-compose
 
