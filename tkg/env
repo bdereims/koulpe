@@ -1,0 +1,8 @@
+export GOVC_URL=pcc-178-32-194-72.ovh.com
+export GOVC_INSECURE=0
+export GOVC_DATACENTER="pcc-178-32-194-72_cloud-garage"
+export GOVC_DATASTORE=vsanDatastore
+export GOVC_NETWORK="cpod-tkg"
+export GOVC_RESOURCE_POOL="/${GOVC_DATACENTER}/host/Cluster/Resources/cPod-TKG"
+export BITS=/data/BITS/TKG
+export TKG_DIR=TKG
