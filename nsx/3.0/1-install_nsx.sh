@@ -46,7 +46,7 @@ install_nsx_manager() {
 	replace_json ${TEMP} "NetworkMapping" "Name" "Network 1" "Network" "${NSX_HOST_COMMON_NETWORK0}"
 
 	govc import.ova -options=${TEMP} -name="${NSX_MANAGER_NAME}-1" ${NSX_MANAGER_OVA_FILE}
-	govc vm.power -on -vm.dns="${NSX_COMMON_HOSTNAME}"
+	govc vm.power -on ${NSX_MANAGER_NAME}-1 
 
 	rm ${TEMP}
 }
@@ -78,13 +78,13 @@ install_nsx_edge() {
         replace_json ${TEMP} "NetworkMapping" "Name" "Network 2" "Network" "${NSX_HOST_COMMON_NETWORK0}"
         replace_json ${TEMP} "NetworkMapping" "Name" "Network 3" "Network" "${NSX_HOST_COMMON_NETWORK0}"
 
-        govc import.ova -options=${TEMP} -name="${NSX_EDGE_NAME}-1" ${NSX_MANAGER_OVA_FILE}
-        govc vm.power -on -vm.dns="edge-1"
+        govc import.ova -options=${TEMP} -name="${NSX_EDGE_NAME}-1" ${NSX_EDGE_OVA_FILE}
+	govc vm.power -on ${NSX_EDGE_NAME}-1 
 
 	rm ${TEMP}
 }
 
 install_nsx_manager
-#install_nsx_edge
+install_nsx_edge
 
 printf "\n\n###\n### Wait until complet startup of Manager & Edge...\n###\n"
