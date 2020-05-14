@@ -7,4 +7,5 @@ echo "!!!"
 read dummy
 
 rm -fr ~/.kube
+rm -fr ~/.tkg
 

@@ -22,5 +22,5 @@ echo "=== Create TKG VM folder"
 govc folder.create /${GOVC_DATACENTER}/vm/${TKG_DIR}
 
 echo "=== Import OVAs as templates"
-import_ova photon-3-v1.17.3+vmware.1
-import_ova photon-3-capv-haproxy-v0.6.2+vmware.2
+import_ova photon-3-v1.17.3_vmware.2
+import_ova photon-3-capv-haproxy-v0.6.3_vmware.1
